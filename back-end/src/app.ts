@@ -2,6 +2,7 @@ import * as express from 'express';
 import * as cors from 'cors';
 import userRouter from './routes/users.routes';
 import ServicesRouter from './routes/services.routes';
+import PartsRouter from './routes/parts.routes';
 
 class App {
   public app: express.Express;
@@ -27,6 +28,7 @@ class App {
     this.app.use(accessControl);
     this.app.use(userRouter);
     this.app.use(ServicesRouter);
+    this.app.use(PartsRouter);
   }
 
   public start(PORT: string | number):void {
