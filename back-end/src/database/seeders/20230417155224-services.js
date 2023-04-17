@@ -8,6 +8,7 @@ module.exports = {
         employeeId: 1,
         customerId: 2,
         description: 'troca de pneu',
+        totalPrice: 250,
       },
     ], {});
   },

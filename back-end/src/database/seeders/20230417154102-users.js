@@ -9,7 +9,7 @@ module.exports = {
       },
       {
         username: 'joão',
-        role: 'cliente'
+        role: 'employee'
       },
     ], {});
   },
