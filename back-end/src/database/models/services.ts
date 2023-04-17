@@ -1,4 +1,4 @@
-import { STRING, INTEGER, Model } from 'sequelize';
+import { STRING, INTEGER, DECIMAL, Model } from 'sequelize';
 import db from '.';
 import Users from './users';
 
@@ -41,6 +41,10 @@ Services.init({
   },
   description: {
     type: STRING,
+    allowNull: false,
+  },
+  totalPrice: {
+    type: DECIMAL,
     allowNull: false,
   },
 }, {
