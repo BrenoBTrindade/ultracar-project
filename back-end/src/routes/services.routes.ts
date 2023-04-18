@@ -3,6 +3,6 @@ import ServicesController from '../controller/services';
 
 const ServicesRouter = Router();
 
-ServicesRouter.get('/services', ServicesController.getALL);
+ServicesRouter.get('/services/:employeeId', ServicesController.getALL);
 
 export default ServicesRouter;

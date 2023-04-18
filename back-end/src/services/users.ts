@@ -1,3 +1,4 @@
+import { createToken } from '../helpers/jwt';
 import Users from '../database/models/users';
 
 export default class UserService {
@@ -21,8 +22,12 @@ export default class UserService {
   };
 
   static employeeLogin = async (username: string) => {
-    const employee = await Users.findOne({ where: { username, role: 'employee' } });
+    const employee = await Users.findOne({ where: { username, role: 'employee' } }) as Users;
     if (!employee) return { code: 401, message: 'not found' };
-    return { code: 200, id: employee.id };
+
+    const token = createToken(
+      { id: employee.id, username: employee.username, role: employee.role },
+    );
+    return { code: 200, token, employeeId: employee.id };
   };
 }

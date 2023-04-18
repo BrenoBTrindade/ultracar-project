@@ -5,8 +5,8 @@ module.exports = {
     await queryInterface.bulkInsert('services', [
       {
         carModel: 'fusca',
-        employeeId: 1,
-        customerId: 2,
+        employeeId: 2,
+        customerId: 1,
         description: 'troca de pneu',
         totalPrice: 250,
       },
