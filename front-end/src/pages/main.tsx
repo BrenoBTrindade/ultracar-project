@@ -11,16 +11,23 @@ function Main() {
     
   }
 
+  const handleCustomerForm = async (event: any) => {
+    navigate({pathname: '/createCustomer' })
+  }
+
   return (
     <section>
       <Header / >
-      <div>
-        <ServicesCards />
-      </div>
       <div className="service-buttons">
         <button onClick={ handleNavigate }>
           Registrar servico
         </button>
+        <button onClick={handleCustomerForm}>
+          Registrar Cliente
+        </button>
+      </div>
+      <div>
+        <ServicesCards />
       </div>
     </section>
   );

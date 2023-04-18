@@ -37,7 +37,7 @@
     padding: 5px;
   }
 
-  .login-buttons{
+  .login-buttons .price-buttons{
     display: flex;
     justify-content: center
   }
@@ -57,7 +57,22 @@
     width: 100px;
   }
 
-  .login-buttons button:hover {
+  .price-buttons button {
+    margin-left: 5px;
+    border-radius: 10px;
+    color: white;
+    background-color:  rgba(39, 115, 207, 0.499);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    height: 50px;
+    padding: 10px 20px;
+    transition-duration: 0.4s;
+    width: 120px;
+  }
+
+  .login-buttons .price-buttons button:hover {
     background-color: white;
     border: none;
     box-shadow: 3px 3px 10px #010010;
