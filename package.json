@@ -1,0 +1,15 @@
+{
+  "name": "ultracar-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd ./backend && npx tsc",
+    "dev": "cd ./back-end && docker-compose up -d &&  npm run pre:dev && npm run dev",
+    "start": "cd ./front-end && npm start",
+    "down": "docker-compose down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

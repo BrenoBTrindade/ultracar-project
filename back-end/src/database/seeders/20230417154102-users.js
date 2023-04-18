@@ -11,6 +11,14 @@ module.exports = {
         username: 'joão',
         role: 'employee'
       },
+      {
+        username: 'maria',
+        role: 'employee'
+      },
+      {
+        username: 'ana',
+        role: 'customer'
+      },
     ], {});
   },
 
