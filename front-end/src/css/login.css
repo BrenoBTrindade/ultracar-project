@@ -70,6 +70,7 @@
     padding: 10px 20px;
     transition-duration: 0.4s;
     width: 120px;
+    margin-bottom: 5px;
   }
 
   .login-buttons .price-buttons button:hover {
