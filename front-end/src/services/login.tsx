@@ -23,3 +23,14 @@ export const servicesRequest = async (employeeID: string) => {
   }
 
 };
+
+export const createCustomerRequest = async (username: string, role: string) => {
+  try {
+    const response = await axios.post(`${backUrl}/register`, { username, role });
+    return response.data;
+    
+  } catch (error) {
+    return '';
+  }
+
+};

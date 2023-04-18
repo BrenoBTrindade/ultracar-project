@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import '../css/services.css'
 
 function ServicesCards() {
+  const name = localStorage.getItem('user') || ''
+  const username = JSON.parse(name)
   const [services, setServices] = useState([])
   const navigate = useNavigate()
 
@@ -22,6 +24,7 @@ function ServicesCards() {
     <div className="services">
       {services.map((service: any, index) => (
         <div className="services-container" key={index}>
+          <h3>Serviço de {username} </h3>
           <p>
             {service.customer.username}
           </p>

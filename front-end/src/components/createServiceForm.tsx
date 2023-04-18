@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { createServiceRequest, partsRequest } from '../services/services';
+import '../css/login.css'
 
 function CreateServiceForm() {
   const [username, setUsername] = useState('');
@@ -32,26 +33,27 @@ function CreateServiceForm() {
   }, []);
 
   return (
-    <div>
+    <div className="login-page">
       <form className='login-section'>
         <input
           type="text"
-          placeholder="Usuário"
+          placeholder="Nome"
           value={ username }
           onChange={ ({ target }) => setUsername(target.value) }
         />
         <input
           type="text"
-          placeholder="Car"
+          placeholder="Carro"
           value={ carModel}
           onChange={ ({ target }) => setCarModel(target.value) }
         />
         <input
           type="text"
-          placeholder="description"
+          placeholder="descricao"
           value={ description }
           onChange={ ({ target }) => setDescription(target.value) }
         />
+        <div className="price-buttons">
         {parts.map((part:any, index) => (
           <button
             type='button'
@@ -62,10 +64,11 @@ function CreateServiceForm() {
           </button>
         
           ))}
+        </div>
         <p>{totalPrice}</p>
         <input
           type="text"
-          placeholder="Price"
+          placeholder="Editar preco do servico"
           value={ totalPrice }
           onChange={ ({ target }) => setTotalPrice(target.value) }
         />
