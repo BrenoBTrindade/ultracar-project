@@ -22,6 +22,7 @@ function CreateServiceForm() {
 
   const request = async () => {
     const allparts = await partsRequest()
+    localStorage.setItem('parts', JSON.stringify(allparts))
     if(!allparts) return ''
     setParts(allparts)
   }
@@ -52,14 +53,16 @@ function CreateServiceForm() {
           onChange={ ({ target }) => setDescription(target.value) }
         />
         {parts.map((part:any, index) => (
-            <div>
-              <p
-              key={index}
-              >
-                {`${part.name} R$: ${part.price}`}
-              </p>
-          </div>
+          <button
+            type='button'
+            key={index}
+            onClick={() => setTotalPrice(part.price)}
+          >
+            {`${part.name} R$: ${part.price}`}
+          </button>
+        
           ))}
+        <p>{totalPrice}</p>
         <input
           type="text"
           placeholder="Price"
