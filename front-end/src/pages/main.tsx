@@ -4,7 +4,7 @@ import ServicesCards from "../components/servicesCards";
 
 function Main() {
   const navigate = useNavigate()
-  const handleNavigate = async (event) => {
+  const handleNavigate = async (event:any) => {
     event.preventDefault();
     navigate({pathname: '/register'})
     
