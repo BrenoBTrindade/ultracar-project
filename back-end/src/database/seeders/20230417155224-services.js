@@ -10,6 +10,13 @@ module.exports = {
         description: 'troca de pneu',
         totalPrice: 250,
       },
+      {
+        carModel: 'fusca',
+        employeeId: 2,
+        customerId: 1,
+        description: 'radiador',
+        totalPrice: 450,
+      },
     ], {});
   },
 
