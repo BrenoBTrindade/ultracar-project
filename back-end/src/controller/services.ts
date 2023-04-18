@@ -3,7 +3,8 @@ import Services from '../services/services';
 
 export default class ServicesController {
   static getALL = async (req: Request, res: Response) => {
-    const { code, data } = await Services.getAll();
-    res.status(code).json({ data });
+    const { employeeId } = req.params;
+    const { code, allServices } = await Services.getAll(employeeId);
+    res.status(code).json({ allServices });
   };
 }

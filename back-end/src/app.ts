@@ -3,6 +3,7 @@ import * as cors from 'cors';
 import userRouter from './routes/users.routes';
 import ServicesRouter from './routes/services.routes';
 import PartsRouter from './routes/parts.routes';
+import errMiddleware from './helpers/errMiddleware';
 
 class App {
   public app: express.Express;
@@ -29,6 +30,7 @@ class App {
     this.app.use(userRouter);
     this.app.use(ServicesRouter);
     this.app.use(PartsRouter);
+    this.app.use(errMiddleware);
   }
 
   public start(PORT: string | number):void {

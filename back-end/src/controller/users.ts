@@ -22,8 +22,7 @@ export default class UserController {
 
   static employeeLogin = async (req: Request, res: Response) => {
     const { username } = req.body;
-    const { code, message, id } = await UserService.employeeLogin(username);
-    if (message) return res.status(code).json({ message });
-    res.status(code).json({ employeeId: id });
+    const { code, token, employeeId } = await UserService.employeeLogin(username);
+    res.status(code).json({ token, employeeId });
   };
 }
