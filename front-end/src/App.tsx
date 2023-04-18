@@ -1,6 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Login from './pages/login';
 import Main from './pages/main';
+import Register from './pages/registerService';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Route path="/" element={ <Navigate to="/login" /> } />
         <Route path="/login" element={ <Login /> } />
         <Route path="/main" element={ <Main /> } />
+        <Route path="/register" element={ <Register /> } />
       </Routes>
     </BrowserRouter>
   );
