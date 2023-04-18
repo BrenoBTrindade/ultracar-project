@@ -7,12 +7,12 @@
 
 ### `npm run dev`
 
-## Após o uso dos comandos acima abra outro terminal e utilize o comando abaixo para renderizar a aplicação no navegador:
+## Após o uso do comando acima abra outro terminal e utilize o comando abaixo para renderizar a aplicação no navegador:
 
 ### `npm start`
 
 
-## Para utilizar a tela main e fazer registros de servico e de clientes disponibilizo dois logins joão e maria, para criar servicos voce pode utilizar o cliente pedro ou ana, ou utilizar a opcao de criacao de clientes.
+## Para utilizar a tela main e fazer registros de servico e de clientes disponibilizo dois logins, joão e maria, para criar servicos voce pode utilizar o cliente pedro ou ana, ou utilizar a opcao de criacao de clientes.
 
 
 ## a aplicacao ainda esta em desenvolvimento, futuras features serão implementadas
